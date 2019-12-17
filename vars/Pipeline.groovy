@@ -7,5 +7,5 @@ def call(body) {
     body()
 
     echo config.name
-    return this
+    //return this
 }

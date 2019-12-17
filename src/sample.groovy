@@ -1,17 +1,6 @@
 public class Sample {
-    private int x;
-    private int y;
-
-    public Sample(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    @Override
-    public String toString() {
-        return "Sample{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
-    }
+    int a = 1
+	int b = 2
+	Script script 
+	script.echo("Cloud DevOps training course from AspireNew Technologies")
 }

@@ -5,8 +5,7 @@ def call(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    def sample = new Sample()
-    sample()
+    new Sample(script:this).run()
     echo config.name
     
     

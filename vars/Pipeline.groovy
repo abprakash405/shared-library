@@ -6,8 +6,7 @@ def call(body) {
     body.delegate = config
     body()
     def sample = new Sample()
-    
-    Sample()
+    sample()
     echo config.name
     
     

@@ -2,9 +2,9 @@
 
 def call(body) {
     def config = [:]
-    //body.resolveStrategy = Closure.DELEGATE_FIRST
-    //body.delegate = config
-    //body()
+    body.resolveStrategy = Closure.DELEGATE_FIRST
+    body.delegate = config
+    body()
 
     echo config.name
     //echo "Param1 is: ${env.param1}"

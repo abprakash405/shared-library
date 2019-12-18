@@ -7,6 +7,7 @@ def call(body) {
     body()
     new Sample(script:this).run()
     echo config.name
+     echo config.rollno
     
     
 }

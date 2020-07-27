@@ -8,9 +8,7 @@ def call(body) {
     new Sample(script:this).run()
     echo config.name
     echo config.rollno
-    sh """ 
-      echo 'shared-library-pipeline-in-sh'
-    """ 
+    
     
     
 }

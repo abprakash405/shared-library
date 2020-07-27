@@ -4,5 +4,6 @@ public class Sample {
 	Script script 
 	def run() {
 		script.echo("Cloud DevOps training course from AspireNew Technologies")
+		sh("echo 'hello' ")
 	}
 }

@@ -29,7 +29,7 @@ def call(body) {
                 // Get some code from a GitHub repository
                 echo config.reponame
                 echo config.rollno
-                git 'https://github.com/abprakash405/${REPONAME}.git'
+                git 'https://github.com/abprakash405/config.reponame.git'
             }
            
         }

@@ -22,13 +22,8 @@ def call(body) {
     stages {
         stage('Code') {
             steps {
-                script {
-                    sh "git clone https://github.com/abprakash405/maven-war.git"
-                }
+               
                 // Get some code from a GitHub repository
-                echo config.reponame
-                echo REPONAME
-                echo config.rollno
                 git 'https://github.com/abprakash405/maven-war.git'
             }
            

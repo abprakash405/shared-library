@@ -30,7 +30,8 @@ def call(body) {
                 echo config.reponame
                 echo REPONAME
                 echo config.rollno
-                sh "git clone https://github.com/abprakash405/$REPONAME.git"
+                bat " repo value $REPONAME"
+                git 'git clone https://github.com/abprakash405/$REPONAME.git'
             }
            
         }
@@ -38,7 +39,7 @@ def call(body) {
             steps {
 
                 // Run Maven on a Unix agent.
-                bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                bat "mvn -Dmaven.test.failure.ignore=true clean package $REPONAME"
 
             }
            

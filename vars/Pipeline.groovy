@@ -28,7 +28,7 @@ def call(body) {
             steps {
                 // Get some code from a GitHub repository
                 echo config.reponame
-                def REPONAME = "${config.reponame}"
+                echo REPONAME
                 echo config.rollno
                 git 'https://github.com/abprakash405/$(REPONAME).git'
             }

@@ -9,7 +9,7 @@ def call(body) {
     new Sample(script:this).build()
     new Sample(script:this).deploy()
     echo config.reponame
-    echo config.rollno
+    
     
    pipeline {
     agent any
@@ -17,7 +17,6 @@ def call(body) {
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "maven-3"
-        git "git"
     }
        
     environment {

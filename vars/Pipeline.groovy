@@ -51,7 +51,7 @@ def call(body) {
                     //bat 'curl "http://admin:admin@localhost:8082/manager/text/undeploy?path=/asn-war-example-1.0.0-SNAPSHOT"'
                 
                     //delete new package
-                    bat 'curl --upload-file target/asn-war-example-1.0.0-SNAPSHOT.war "http://admin:admin@localhost:8082/manager/text/deploy?path=/asn-war-example-1.0.0-SNAPSHOT"'
+                    bat 'curl --upload-file target/*.war "http://admin:admin@localhost:8082/manager/text/deploy?path=/${env.currentBuild.displayName}"'
                 
             }
            

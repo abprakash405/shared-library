@@ -13,7 +13,10 @@ def call(body) {
     
    pipeline {
     agent any
-
+    
+    environment {
+        reponame = "${config.reponame}"
+        
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "maven-3"
@@ -23,7 +26,7 @@ def call(body) {
         stage('Code') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/abprakash405/"config.reponame".git'
+                git 'https://github.com/abprakash405/${reponame}.git'
             }
            
         }

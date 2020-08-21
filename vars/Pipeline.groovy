@@ -37,8 +37,8 @@ def call(body) {
     stage('Build') {
             steps {
                 dir("maven-war") {
-                // Run Maven on a Unix agent.
-                bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                    // Run Maven on a Unix agent.
+                    bat "mvn -Dmaven.test.failure.ignore=true clean package"
                 }
 
             }
@@ -46,12 +46,13 @@ def call(body) {
         }
     stage('Deploy') {
             steps {
-                //delete old package if required
-                //bat 'curl "http://admin:admin@localhost:8082/manager/text/undeploy?path=/asn-war-example-1.0.0-SNAPSHOT"'
+                dir("maven-war") {
+                    //delete old package if required
+                    //bat 'curl "http://admin:admin@localhost:8082/manager/text/undeploy?path=/asn-war-example-1.0.0-SNAPSHOT"'
                 
-                //delete new package
-                bat 'curl --upload-file target/asn-war-example-1.0.0-SNAPSHOT.war "http://admin:admin@localhost:8082/manager/text/deploy?path=/asn-war-example-1.0.0-SNAPSHOT"'
-
+                    //delete new package
+                    bat 'curl --upload-file target/asn-war-example-1.0.0-SNAPSHOT.war "http://admin:admin@localhost:8082/manager/text/deploy?path=/asn-war-example-1.0.0-SNAPSHOT"'
+                }
             }
            
         }

@@ -27,7 +27,7 @@ def call(body) {
             }
            
         }
-stage('Build') {
+    stage('Build') {
             steps {
 
                 // Run Maven on a Unix agent.
@@ -36,7 +36,7 @@ stage('Build') {
             }
            
         }
-stage('Deploy') {
+    stage('Deploy') {
             steps {
                 //delete old package if required
                 //bat 'curl "http://admin:admin@localhost:8082/manager/text/undeploy?path=/asn-war-example-1.0.0-SNAPSHOT"'

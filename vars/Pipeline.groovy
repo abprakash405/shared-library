@@ -26,6 +26,9 @@ def call(body) {
     stages {
         stage('Code') {
             steps {
+                script {
+                    sh "git clone https://github.com/abprakash405/$REPONAME.git"
+                }
                 // Get some code from a GitHub repository
                 echo config.reponame
                 echo REPONAME

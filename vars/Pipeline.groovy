@@ -32,7 +32,7 @@ def call(body) {
             steps {
 
                 // Run Maven on a Unix agent.
-                bat "mvn -Dmaven.test.failure.ignore=true clean package $REPONAME"
+                bat "mvn -Dmaven.test.failure.ignore=true clean package"
 
             }
            

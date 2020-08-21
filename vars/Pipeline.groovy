@@ -8,7 +8,7 @@ def call(body) {
     new Sample(script:this).code()
     new Sample(script:this).build()
     new Sample(script:this).deploy()
-    echo config.name
+    echo config.reponame
     echo config.rollno
     
    pipeline {
@@ -23,7 +23,7 @@ def call(body) {
         stage('Code') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/abprakash405/${config.name}.git'
+                git 'https://github.com/abprakash405/${config.reponame}.git'
             }
            
         }

@@ -13,10 +13,6 @@ def call(body) {
     
    pipeline {
     agent any
-    
-    environment {
-        REPONAME = "${config.reponame}"
-    }
         
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
@@ -27,13 +23,13 @@ def call(body) {
         stage('Code') {
             steps {
                 script {
-                    sh "git clone https://github.com/abprakash405/$REPONAME.git"
+                    sh "git clone https://github.com/abprakash405/maven-war.git"
                 }
                 // Get some code from a GitHub repository
                 echo config.reponame
                 echo REPONAME
                 echo config.rollno
-                bat "git clone https://github.com/abprakash405/$REPONAME.git"
+                git 'https://github.com/abprakash405/maven-war.git'
             }
            
         }

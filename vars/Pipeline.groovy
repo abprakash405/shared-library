@@ -23,7 +23,7 @@ def call(body) {
         stage('Code') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/abprakash405/${config.reponame}.git'
+                git 'https://github.com/abprakash405/"config.reponame".git'
             }
            
         }

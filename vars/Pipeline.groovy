@@ -20,9 +20,7 @@ def call(body) {
         git "git"
     }
        
-    environment {
-      REPONAME = "${config.reponame}"
-    }
+    
        
     stages {
         stage('Code') {

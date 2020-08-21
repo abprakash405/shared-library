@@ -16,6 +16,7 @@ def call(body) {
     
     environment {
         reponame = "${config.reponame}"
+    }
         
     tools {
         // Install the Maven version configured as "M3" and add it to the path.

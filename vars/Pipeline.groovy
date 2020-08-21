@@ -30,7 +30,6 @@ def call(body) {
                 echo config.reponame
                 echo REPONAME
                 echo config.rollno
-                bat " repo value $REPONAME"
                 bat "git clone https://github.com/abprakash405/$REPONAME.git"
             }
            

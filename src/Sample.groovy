@@ -4,14 +4,14 @@ public class Sample {
 	Script script 
 	def code() {
 		script.echo("Cloud DevOps training course from AspireNew Technologies")
-		sh("echo 'code stage' ")
+		
 	}
 	def build() {
 		script.echo("Cloud DevOps training course from AspireNew Technologies")
-		sh("echo 'build stage' ")
+		
 	}
 	def deploy() {
 		script.echo("Cloud DevOps training course from AspireNew Technologies")
-		sh("echo 'deploy stage' ")
+		
 	}
 }

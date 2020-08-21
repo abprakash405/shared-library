@@ -15,7 +15,7 @@ def call(body) {
     agent any
     
     environment {
-        reponame = "${config.reponame}"
+        REPONAME = "${config.reponame}"
     }
         
     tools {
@@ -27,7 +27,7 @@ def call(body) {
         stage('Code') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/abprakash405/$reponame.git'
+                git 'https://github.com/abprakash405/${REPONAME}.git'
             }
            
         }

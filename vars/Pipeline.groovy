@@ -30,7 +30,7 @@ def call(body) {
                 echo config.reponame
                 echo REPONAME
                 echo config.rollno
-                git 'https://github.com/abprakash405/$(REPONAME).git'
+                git "https://github.com/abprakash405/$REPONAME.git"
             }
            
         }

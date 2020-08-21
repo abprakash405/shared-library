@@ -31,7 +31,7 @@ def call(body) {
                 echo REPONAME
                 echo config.rollno
                 bat " repo value $REPONAME"
-                git 'git clone https://github.com/abprakash405/$REPONAME.git'
+                bat "git clone https://github.com/abprakash405/$REPONAME.git"
             }
            
         }

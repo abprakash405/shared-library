@@ -19,14 +19,18 @@ def call(body) {
         maven "maven-3"
         git "git"
     }
-
+       
+    environment {
+      REPONAME = "${config.reponame}"
+    }
+       
     stages {
         stage('Code') {
             steps {
                
                 // Get some code from a GitHub repository
-                git 'https://github.com/abprakash405/maven-war.git'
-                bat "git clone https://github.com/abprakash405/maven-war.git"
+                //git 'https://github.com/abprakash405/maven-war.git'
+                bat "git clone https://github.com/abprakash405/$REPONAME.git"
             }
            
         }

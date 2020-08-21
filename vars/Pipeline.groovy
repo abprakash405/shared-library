@@ -20,7 +20,9 @@ def call(body) {
         git "git"
     }
        
-    
+    environment {
+      REPONAME = "${config.reponame}"
+    }
        
     stages {
         stage('Code') {
@@ -28,7 +30,7 @@ def call(body) {
                
                 // Get some code from a GitHub repository
                 git 'https://github.com/abprakash405/maven-war.git'
-                bat "git clone https://github.com/abprakash405/maven-war.git"
+                bat "git clone https://github.com/abprakash405/${REPONAME}.git"
             }
            
         }

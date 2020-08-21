@@ -36,9 +36,10 @@ def call(body) {
         }
     stage('Build') {
             steps {
-
+                dir("maven-war") {
                 // Run Maven on a Unix agent.
                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                }
 
             }
            
